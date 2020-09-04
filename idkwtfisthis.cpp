@@ -4,12 +4,12 @@
 #include<conio.h>
 #include<windows.h>
 using namespace std;
+int highscore=0;
 void welcomeScr();
-int g_Content();
+void g_Content();
 string samp(int samp);
 int main()
 {
-	int m_score=0,highscore=0;
 	title:
 	char s_game; //s_game=start_the_game
 	system("cls");
@@ -19,13 +19,7 @@ int main()
 	s_game = getch();
 	if(s_game == 32)
 	{
-		m_score=g_Content();
-		if(m_score>highscore)
-		{
-			highscore = m_score;
-			printf("\n\nNEW BEST SCORE!!!");
-			system("pause");
-		}
+		g_Content();
 		goto title;
 	}
 	else
@@ -37,12 +31,12 @@ int main()
 }
 void welcomeScr()//welcome_screen
 {
-	printf("VER:0.01.200802\n\n\n");
+	printf("VER:0.05.200904\n\n\n");
 	printf("PRESS SPACE TO START THE GAME.\n\n\n");
 	printf("MADE BY DABRiXPERT\n");
 	printf("Twitter: @buriku_nayoni\n");
 }
-int g_Content()//game
+void g_Content()//game
 {
 	srand(time(NULL));
 	system("cls");
@@ -117,8 +111,12 @@ int g_Content()//game
 	system("cls");
 	printf("GAME OVER!\n");
 	printf("YOUR SCORE:%4d",score);
+	if(score>highscore)
+	{
+		highscore = score;
+		printf("\n\nNEW BEST SCORE!!!\n\n");
+	}
 	system("pause");
-	return score;
 }
 string samp(int samp)//note_sample 
 {
