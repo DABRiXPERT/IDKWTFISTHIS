@@ -31,7 +31,7 @@ int main()
 }
 void welcomeScr()//welcome_screen
 {
-	printf("VER:0.05.200904\n\n\n");
+	printf("VER:0.051.200905\n\n\n");
 	printf("PRESS SPACE TO START THE GAME.\n\n\n");
 	printf("MADE BY DABRiXPERT\n");
 	printf("Twitter: @buriku_nayoni\n");
@@ -40,6 +40,7 @@ void g_Content()//game
 {
 	srand(time(NULL));
 	system("cls");
+	char e_game;
 	int tmp;   string temp;
 	int l[13]; string line[15];
 	line[13] = "-----------\n";
@@ -110,13 +111,19 @@ void g_Content()//game
 	}
 	system("cls");
 	printf("GAME OVER!\n");
-	printf("YOUR SCORE:%4d",score);
+	printf("YOUR SCORE:%4d\n",score);
 	if(score>highscore)
 	{
 		highscore = score;
-		printf("\n\nNEW BEST SCORE!!!\n\n");
+		printf("\nNEW BEST SCORE!!!\n");
 	}
-	system("pause");
+	printf("\nPRESS SPACE TO GO BACK TO TITLE SCREEN.");
+	end:
+	e_game = getch();
+	if(e_game != 32)
+	{
+		goto end;
+	}
 }
 string samp(int samp)//note_sample 
 {

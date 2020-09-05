@@ -1,0 +1,9 @@
+This program (.exe) was compiled under Dev-C++ x64(5.11) version.
+It may not compatible with x86.
+Re-compile it with x86 C++ compiler then execute it.
+
+September 5th, 2020
+
+"F9 to compile and execute."
+
+----johneasy(My computer teacher), 2020
