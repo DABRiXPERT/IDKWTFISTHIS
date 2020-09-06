@@ -1,6 +1,8 @@
 ==[v0.055/0.06].2009XX[FUTURE FEATURE]==
 Add Python version.				      <==0.055ver
 Changeable key position. (eg. SDJK,SDKL,DFJK,DFKL)    <==0.06ver
+--v0.052.200906--
+Remove all the gotos.
 --v0.051.200905--
 Now in result screen, you need to press SPACE key instead of any other keys,
 In case of some players accidentally skips the result screen by pressing "DFKL" again.
