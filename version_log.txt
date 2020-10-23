@@ -1,15 +1,24 @@
-==[v0.055/0.06].2009XX[FUTURE FEATURE]==
-Add Python version.				      <==0.055ver
-Changeable key position. (eg. SDJK,SDKL,DFJK,DFKL)    <==0.06ver
+==v0.07.20(21?)XXXX==[FUTURE FEATURE]
+Leaderboard.
+
+--v0.06.201024--
+Changeable key layout. (eg. SDJK,SDKL,DFJK,DFKL)
+Highscore appears during games.
+Python version has been abandoned.(No efficiency)
+Changed some grammar mistake.(LOG)
+
 --v0.052.200906--
-Remove all the gotos.
+All of the gotos have been removed.
+
 --v0.051.200905--
-Now in result screen, you need to press SPACE key instead of any other keys,
-In case of some players accidentally skips the result screen by pressing "DFKL" again.
+Now in the result screen, you need to press the SPACE key instead of any other keys,
+In the case of some players accidentally skips the result screen.
+
 --v0.05.200904--
 Add concept.txt
 Score and highscore now showing at the same time.
 (Without pressing any key again)
+
 --v0.01.200802--
 Alpha Test on
 Estimated time: Forever?

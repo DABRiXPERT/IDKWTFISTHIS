@@ -5,28 +5,35 @@
 #include<windows.h>
 using namespace std;
 int highscore=0;
+char main_menu;
+char keyboard_layout[8]={'D','F','J','K','d','f','j','k'};
 void welcomeScr();
 void g_Content();
+void setting();
 string samp(int samp);
 int main()
 {
 	for(;;)
 	{
-		do 
-		{
-			system("cls");
-			welcomeScr();
-			printf("\n\nHIGHSCORE:%4d", highscore);
-		}while(getch() != 32);
-		g_Content();
+		
+		system("cls");
+		welcomeScr();
+		printf("\n\nHIGHSCORE:%4d", highscore);
+		main_menu = getch(); 
+		if(main_menu == 32)
+			g_Content();
+		else if(main_menu == 83 || main_menu == 115)
+	        setting();		
 	}
 	system("pause");
 	return 0;
 }
 void welcomeScr()//welcome_screen
 {
-	printf("VER:0.052.200906\n\n\n");
-	printf("PRESS SPACE TO START THE GAME.\n\n\n");
+	printf("VER:0.06.201024\n\n\n");
+	printf("PRESS SPACE TO START THE GAME.");
+	printf("\nPRESS S TO SWITCH THE KEY LAYOUT.");
+	printf("\nCURRENT KEY LAYOUT: %c%c%c%c\n\n\n",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
 	printf("MADE BY DABRiXPERT\n");
 	printf("Twitter: @buriku_nayoni\n");
 }
@@ -36,9 +43,8 @@ void g_Content()//game
 	system("cls");
 	char e_game;
 	int tmp;   string temp;
-	int l[13]; string line[15];
+	int l[13]; string line[14];
 	line[13] = "-----------\n";
-	line[14] = "  D F K L  ";
 	for(int i = 0; i <= 12; i++)
 	{
 		l[i] = rand()%4+1;
@@ -46,13 +52,14 @@ void g_Content()//game
 		cout<<line[i];
 	}
 	cout<<line[13];
-	cout<<line[14];
+	printf("  %c %c %c %c  ",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
 	printf("\n\nREADY...");
 	Sleep(998);
 //-------------------------------------------------------------------------------------------------
 	system("cls");
 	int in,score=0;
 	int gameover=0;
+	char input;
 	while(gameover==0)
 	{
 		for(int i = 0; i <= 12; i++)
@@ -60,29 +67,22 @@ void g_Content()//game
 			cout<<line[i];
 		}
 		cout<<line[13];
-		cout<<line[14];
-		printf("\n\nSCORE:%4d",score);
-		switch(getch())
-		{
-			case 'D':
-			case 'd':
-				in = 1;
-				break;
-			case 'F':
-			case 'f':
-				in = 2;
-				break;
-			case 'K':
-			case 'k':
-				in = 3;
-				break;
-			case 'L':
-			case 'l':
-				in = 4;
-				break;
-			default:
-				in = 999;
-		}
+		printf("  %c %c %c %c  ",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
+		printf("\n\nSCORE:%6d",score);
+		printf("\nH-SCORE:%4d",highscore);
+		input = getch();
+//-------------------------------------------------------------------------------------------------
+		if(input == keyboard_layout[0] || input == keyboard_layout[4])
+			in = 1;
+		else if(input == keyboard_layout[1] || input == keyboard_layout[5])
+			in = 2;
+		else if(input == keyboard_layout[2] || input == keyboard_layout[6])
+			in = 3;
+		else if(input == keyboard_layout[3] || input == keyboard_layout[7])
+			in = 4;
+		else
+			in = 999;
+//-------------------------------------------------------------------------------------------------
 		if(in != l[12] && in != 999)
 		{
 			gameover++;
@@ -116,6 +116,36 @@ void g_Content()//game
 	if(score>highscore)
 	{
 		highscore = score;
+	}
+	main_menu = 0;
+}
+void setting()//setting
+{
+	system("cls"); 
+	printf(" |  |  |  |  | \n");
+	printf(" |  |  |  |  | \n");
+	printf(" |  |  |  |  | \n");
+	printf("---------------\n");
+	printf("  K0 K1 K2 K3  \n\n");
+	printf("SELECT K0: ");
+	scanf("%s", &keyboard_layout[0]);
+	printf("SELECT K1: ");
+	scanf("%s", &keyboard_layout[1]);
+	printf("SELECT K2: ");
+	scanf("%s", &keyboard_layout[2]);
+	printf("SELECT K3: ");
+	scanf("%s", &keyboard_layout[3]);
+	for(int i = 0; i <= 3; i++)
+	{
+		if(keyboard_layout[i] >= 65 && keyboard_layout[i] <= 90)
+		{
+			keyboard_layout[i+4] = keyboard_layout[i] + 32; 
+		}
+		if(keyboard_layout[i] >= 97 && keyboard_layout[i] <= 122)
+		{
+			keyboard_layout[i+4] = keyboard_layout[i]; 
+			keyboard_layout[i] = keyboard_layout[i+4] - 32;
+		}
 	}
 }
 string samp(int samp)//note_sample 
