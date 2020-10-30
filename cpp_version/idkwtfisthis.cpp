@@ -5,11 +5,12 @@
 #include<windows.h>
 using namespace std;
 int highscore=0;
-char main_menu;
+char stop;
 char keyboard_layout[8]={'D','F','J','K','d','f','j','k'};
 void welcomeScr();
 void g_Content();
 void setting();
+void pause();
 string samp(int samp);
 int main()
 {
@@ -19,10 +20,10 @@ int main()
 		system("cls");
 		welcomeScr();
 		printf("\n\nHIGHSCORE:%4d", highscore);
-		main_menu = getch(); 
-		if(main_menu == 32)
+		stop = getch(); 
+		if(stop == 32)
 			g_Content();
-		else if(main_menu == 83 || main_menu == 115)
+		else if(stop == 83 || stop == 115)
 	        setting();		
 	}
 	system("pause");
@@ -30,7 +31,7 @@ int main()
 }
 void welcomeScr()//welcome_screen
 {
-	printf("VER:0.06.201024\n\n\n");
+	printf("VER:0.065.201030\n\n\n");
 	printf("PRESS SPACE TO START THE GAME.");
 	printf("\nPRESS S TO SWITCH THE KEY LAYOUT.");
 	printf("\nCURRENT KEY LAYOUT: %c%c%c%c\n\n\n",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
@@ -70,7 +71,12 @@ void g_Content()//game
 		printf("  %c %c %c %c  ",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
 		printf("\n\nSCORE:%6d",score);
 		printf("\nH-SCORE:%4d",highscore);
+		printf("\nPRESS SPACE TO PAUSE",highscore);
 		input = getch();
+		if(input == 32)
+		{
+			pause();
+		}
 //-------------------------------------------------------------------------------------------------
 		if(input == keyboard_layout[0] || input == keyboard_layout[4])
 			in = 1;
@@ -117,7 +123,7 @@ void g_Content()//game
 	{
 		highscore = score;
 	}
-	main_menu = 0;
+	stop = 0;
 }
 void setting()//setting
 {
@@ -127,24 +133,37 @@ void setting()//setting
 	printf(" |  |  |  |  | \n");
 	printf("---------------\n");
 	printf("  K0 K1 K2 K3  \n\n");
-	printf("SELECT K0: ");
-	scanf("%s", &keyboard_layout[0]);
-	printf("SELECT K1: ");
-	scanf("%s", &keyboard_layout[1]);
-	printf("SELECT K2: ");
-	scanf("%s", &keyboard_layout[2]);
-	printf("SELECT K3: ");
-	scanf("%s", &keyboard_layout[3]);
+	for(int i = 0; i <= 3; i++)
+	{
+		//STILL CONSTRUCTING
+		printf("SELECT K%d: ", i);
+		scanf("%s", &keyboard_layout[i]);
+		if(i >= 0)
+		{
+			for(int j = 0; j < i; j++)	
+			{
+				if(keyboard_layout[i] == keyboard_layout[j])
+				{
+					printf("THE KEY WAS OCCUPIED!\n");
+					i--;
+				}
+			}
+		}
+	}
 	for(int i = 0; i <= 3; i++)
 	{
 		if(keyboard_layout[i] >= 65 && keyboard_layout[i] <= 90)
 		{
 			keyboard_layout[i+4] = keyboard_layout[i] + 32; 
 		}
-		if(keyboard_layout[i] >= 97 && keyboard_layout[i] <= 122)
+		else if(keyboard_layout[i] >= 97 && keyboard_layout[i] <= 122)
 		{
 			keyboard_layout[i+4] = keyboard_layout[i]; 
 			keyboard_layout[i] = keyboard_layout[i+4] - 32;
+		}
+		else
+		{
+			keyboard_layout[i+4] = keyboard_layout[i]; 
 		}
 	}
 }
@@ -160,4 +179,14 @@ string samp(int samp)//note_sample
 		return " | | |*| |\n";
     if(samp == 4)
 		return " | | | |*|\n";
+}
+void pause()//pause in game
+{
+	system("cls");
+	stop = 0;
+	printf("PRESS SPACE TO CONTINUE PLAYING.");
+	stop = getch(); 
+	if(stop != 32)
+		pause();
+	system("cls");
 }

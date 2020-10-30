@@ -1,11 +1,15 @@
 ==v0.07.20(21?)XXXX==[FUTURE FEATURE]
 Leaderboard.
 
+--v0.065.201030--
+Improved code of key layout.
+Added "USEFUL" pause button during game.
+
 --v0.06.201024--
 Changeable key layout. (eg. SDJK,SDKL,DFJK,DFKL)
 Highscore appears during games.
 Python version has been abandoned.(No efficiency)
-Changed some grammar mistake.(LOG)
+Corrected some grammar mistake.(LOG)
 
 --v0.052.200906--
 All of the gotos have been removed.
