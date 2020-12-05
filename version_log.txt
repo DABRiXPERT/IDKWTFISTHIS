@@ -1,5 +1,11 @@
-==v0.07.20(21?)XXXX==[FUTURE FEATURE]
+==v0.10.0==[FUTURE version]
 Leaderboard.
+
+--v0.10.0_A2--
+[PRELEASE 20/11/27]
+Added title to title screen.
+Ranking board is still constructing.
+Github release activated.
 
 --v0.065.201030--
 Improved code of key layout.
@@ -25,4 +31,4 @@ Score and highscore now showing at the same time.
 
 --v0.01.200802--
 Alpha Test on
-Estimated time: Forever?
+Estimated time: JAN 31TH 2021

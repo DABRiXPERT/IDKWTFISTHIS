@@ -3,21 +3,31 @@
 #include<ctime>
 #include<conio.h>
 #include<windows.h>
+#include<fstream>
+#include<iomanip>
+#include<sstream>
+#include<string>
 using namespace std;
 int highscore=0;
+int save=0;
 char stop;
 char keyboard_layout[8]={'D','F','J','K','d','f','j','k'};
+string latest_record[3]={"NAMAE_NASHI","0","0"};//NAME, TIME, SCORE
 void welcomeScr();
 void g_Content();
 void setting();
+void rankdotcsv_init();
+void rankdotcsv_import();
+void rankdotcsv_record();
 void pause();
 string samp(int samp);
 int main()
 {
-	for(;;)
+	while(EOF)
 	{
 		
 		system("cls");
+		rankdotcsv_init();
 		welcomeScr();
 		printf("\n\nHIGHSCORE:%4d", highscore);
 		stop = getch(); 
@@ -31,8 +41,15 @@ int main()
 }
 void welcomeScr()//welcome_screen
 {
-	printf("VER:0.065.201030\n\n\n");
-	printf("PRESS SPACE TO START THE GAME.");
+	printf("VER:v0.10.0_A2");
+	printf("\nREV:201127PR2");
+	printf("\n*IN DEV*");
+	printf("\n\n   _      _  _               _     __  _       _    _      _  ");
+	printf("\n  (_)  __| || | ____      __| |_  / _|(_) ___ | |_ | |__  (_) ___");
+	printf("\n  | | / _` || |/ /\\ \\ /\\ / /| __|| |_ | |/ __|| __|| '_ \\ | |/ __|");
+	printf("\n  | || (_| ||   <  \\ V  V / | |_ |  _|| |\\__ \\| |_ | | | || |\\__ \\");
+	printf("\n  |_| \\__,_||_|\\_\\  \\_/\\_/   \\__||_|  |_||___/ \\__||_| |_||_||___/.EXE");
+	printf("\n\n\nPRESS SPACE TO START THE GAME.");
 	printf("\nPRESS S TO SWITCH THE KEY LAYOUT.");
 	printf("\nCURRENT KEY LAYOUT: %c%c%c%c\n\n\n",keyboard_layout[0],keyboard_layout[1],keyboard_layout[2],keyboard_layout[3]);
 	printf("MADE BY DABRiXPERT\n");
@@ -135,7 +152,6 @@ void setting()//setting
 	printf("  K0 K1 K2 K3  \n\n");
 	for(int i = 0; i <= 3; i++)
 	{
-		//STILL CONSTRUCTING
 		printf("SELECT K%d: ", i);
 		scanf("%s", &keyboard_layout[i]);
 		if(i >= 0)
@@ -167,6 +183,44 @@ void setting()//setting
 		}
 	}
 }
+void pause()//pause in game
+{
+	system("cls");
+	stop = 0;
+	printf("PRESS SPACE TO CONTINUE PLAYING.");
+	stop = getch(); 
+	if(stop != 32)
+		pause();
+	system("cls");
+}
+void rankdotcsv_init()//CONSTRUCTING
+{
+	fstream file;
+	save = 0;
+	file.open("rank.csv", ios::out);//NOT EXIST OR EXIST... WHO CARES? 
+    if(!file)
+    {
+    	printf("FAILURE ON TRYING TO OPEN rank.csv\n");
+    	exit(1);
+	}
+	if(file.is_open()){
+	    file<<"RANK"<<","<<"PLAYER"<<","<<"TIME"<<","<<"SCORE"<<"\n";
+		for(int i = 1; i <= 5; i++)    
+		{
+			//DATA_FORMAT
+		 	file<<i<<","<<"NAMAE_NASHI"<<","<<"0"<<","<<"0"<<"\n";
+		}
+		file<<"DO NOT TOUCH ANYTHING!!!!!!!!!!";
+	}
+}
+void rankdotcsv_import()//CONSTRUCTING
+{
+	
+}
+void rankdotcsv_record()//CONSTRUCTING
+{
+	
+}
 string samp(int samp)//note_sample 
 {
 	if(samp == 0)
@@ -180,13 +234,4 @@ string samp(int samp)//note_sample
     if(samp == 4)
 		return " | | | |*|\n";
 }
-void pause()//pause in game
-{
-	system("cls");
-	stop = 0;
-	printf("PRESS SPACE TO CONTINUE PLAYING.");
-	stop = getch(); 
-	if(stop != 32)
-		pause();
-	system("cls");
-}
+
