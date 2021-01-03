@@ -7,3 +7,10 @@ September 5th, 2020
 "F9 to compile and execute."
 
 ----johneasy(My computer teacher), 2020
+
+
+===P.S.: Dec. 31ST, 2020===
+Recently, I switched my main editor from Dev-C++ to VS code,
+so it will be no longer supports Dev-C++ after Jan 1ST, 2021(UTC+8).
+
+*Blank*

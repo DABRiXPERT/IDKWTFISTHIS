@@ -1,10 +1,25 @@
-==v0.10.0==[FUTURE version]
+==v0.15.0==[FUTURE version]
+ARCADE/HARDCORE MODE.
+
+==v0.11.0==[FUTURE version]
+[RELEASE 21/01/XX]
+Encrypted leaderboard.
+Keyboard layout memorizing function.
+Alpha Test ended; Beta Test on.
+Estimated time: 202?/??/??
+
+--v0.10.0--
+[RELEASE 21/01/02]
 Leaderboard.
+IDE changed to VS code.
+Add "INTRO.md" to project(With folder "media").
+Stopped using commit record as release log.
+(Which means if you want to download the latest versoin of the game, you should downlad it at "Releases" page.)
 
 --v0.10.0_A2--
-[PRELEASE 20/11/27]
+[PRE-RELEASE 20/11/27]
 Added title to title screen.
-Ranking board is still constructing.
+Leaderboard is still constructing.
 Github release activated.
 
 --v0.065.201030--
@@ -14,7 +29,7 @@ Added "USEFUL" pause button during game.
 --v0.06.201024--
 Changeable key layout. (eg. SDJK,SDKL,DFJK,DFKL)
 Highscore appears during games.
-Python version has been abandoned.(No efficiency)
+Python version has been abandoned.(Efficiency-less while executing.)
 Corrected some grammar mistake.(LOG)
 
 --v0.052.200906--
@@ -31,4 +46,4 @@ Score and highscore now showing at the same time.
 
 --v0.01.200802--
 Alpha Test on
-Estimated time: JAN 31TH 2021
+Estimated time: JAN 31ST 2021
