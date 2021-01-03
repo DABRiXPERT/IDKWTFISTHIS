@@ -15,27 +15,28 @@
 一個4K類音GAME模擬器  
 製作非常的粗糙  
 差不多像這樣  
-**[圖片 title.png]**
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/title.png)  
 # 如何下載
 剛開始會看到這樣的網站  
-**[圖片 1.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/1.png)  
 按右邊的Release  
-**[圖片 2.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/2.png)  
 然後就會看到這個畫面  
 按下面的Assets  
-**[圖片 3.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/3.png)  
 （先說一下這是舊版的，不過方法大同小異。）  
 接著會看到有很多選項  
-**[圖片 4.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/4.png)  
 至於要下載什麼一個人需求都寫在圖片裡了。  
-**[圖片 5.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/5.png)  
 需要注意的是，我是在 **Windows 10 64位元** 下用 **C++17** 編譯的  
 所以如果是用32位元或不是Windows的人都有可能無法正常運行。  
 然後下載的時候瀏覽器會一直跑 **未受信任的檔案** 或是作業系統跳出這個錯誤：  
-**[圖片 6.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/6.png)  
 這個時候按 **其他資訊** 再按 **仍要執行** 就好了。
-**[圖片 7.png]**  
+![title](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/7.png)  
 到這邊就差不多了。
 # 怎麼玩
+待補充。
 # 後記
 待補充。
