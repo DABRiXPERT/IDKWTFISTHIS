@@ -20,9 +20,10 @@ exe檔執行正常化(不用載編譯器)。
 **2.** [如何下載](#如何下載)  
 **3.** [怎麼玩](#怎麼玩)  
 1. [開始遊戲](#開始遊戲)  
-2. [遊戲結束](#遊戲結束)
+2. [遊戲結束](#遊戲結束)  
 3. [調整鍵位](#調整鍵位)  
-**4.** [後記](#後記)  
+
+**4.** [後記](#後記)   
 <!-- /TOC -->
 # 這到底是什麼
 一個4K類音GAME模擬器  
@@ -37,7 +38,8 @@ exe檔執行正常化(不用載編譯器)。
 然後就會看到這個畫面  
 按下面的`Assets`  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/3.png)  
-（先說一下這是舊版的，不過方法大同小異。）  
+~~（先說一下這是舊版的，不過方法大同小異。）~~  
+現在是新的了。  
 接著會看到有很多選項  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/4.png)  
 至於要下載什麼一個人需求都寫在圖片裡了。  
