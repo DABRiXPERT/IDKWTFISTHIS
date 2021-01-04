@@ -1,8 +1,15 @@
 
 # idkwtfisthis 說明書
-上次更新日期：**2021年01月03日**  
-上次更新版本：`0.10`  
-編號：`210103C`
+上次更新日期(主程式)：**2021年01月03日**  
+上次更新版本(主程式)：`0.10.0`  
+
+上次更新日期(readme.md)：**2021年01月04日**  
+readme.md編號：`210104A`  
+### 主程式更新內容
+將Release內的錯誤的檔案替換成新版。  
+exe檔執行正常化(不用載編譯器)。
+### readme.md更新內容
+將示範圖片改為最新版。
 # 目錄
 ~~原諒一下這裡沒辦法用目錄跳轉下一頁~~  
 ~~所以就手動跳轉吧。~~  
@@ -25,10 +32,10 @@
 # 如何下載
 剛開始會看到這樣的網站  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/1.png)  
-按右邊的Release  
+按右邊的`Release`  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/2.png)  
 然後就會看到這個畫面  
-按下面的Assets  
+按下面的`Assets`  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/3.png)  
 （先說一下這是舊版的，不過方法大同小異。）  
 接著會看到有很多選項  
@@ -95,6 +102,5 @@
 #### 寫程式需要什麼東西？
 電腦，機械鍵盤(建議)，某程式語言的基礎和編譯器或IDE(最好有)，刺激人心的音樂(BPM256或是塞爆32分的那種...好像在說誰)，還有最重要的三個東西：挫折感，自我懷疑還有堅持(雖然也不知道是在堅持什麼)，差不多就這樣。
 
-結束。  
-以下空白。  
-(剛好100行)
+
+### **==以下空白==**
