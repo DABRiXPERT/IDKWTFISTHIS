@@ -65,7 +65,7 @@ exe檔執行正常化(不用載編譯器)。
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/10.png)  
 至於要做什麼的話下面圖片有寫：  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/11.png)  
-狀態欄是讓玩家知道離下一個目標還有多少分；像底下的圖片表示離第一名還有8分：
+狀態欄是讓玩家知道離下一個目標還有多少分；像底下的圖片表示離第一名還有8分：  
 ![down_pic](https://github.com/DABRiXPERT/idkwtfisthis/blob/master/gameplay_screenshot/12.png)  
 如果超越他人的弟第一的話就會顯示 `NEW HIGHSCORE!`  
 如同上上一張圖片。
